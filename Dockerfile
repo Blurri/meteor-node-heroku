@@ -4,8 +4,8 @@ MAINTAINER Gabor Raz
 
 RUN apt-get update
 RUN apt-get update >/dev/null
-RUN sudo apt-get install -y git
 RUN sudo apt-get install -y curl
+RUN sudo apt-get install -y git
 RUN sudo apt-get install -y build-essential
 RUN sudo apt-get install -y python
 RUN sudo apt-get install -y make
@@ -25,7 +25,7 @@ RUN apt-get install -y openssh-client
 RUN echo 'PATH="/usr/local/node/bin:${PATH}"' >> /etc/bash.bashrc
 
 RUN apt-get update
-RUN apt-get install -y software-properties-common  apt-transport-https git
+RUN apt-get install -y software-properties-common  apt-transport-https
 RUN add-apt-repository -y "deb https://cli-assets.heroku.com/branches/stable/apt ./"
 RUN curl -L https://cli-assets.heroku.com/apt/release.key | apt-key add -
 RUN apt-get update
